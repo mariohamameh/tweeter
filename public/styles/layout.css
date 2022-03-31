@@ -9,10 +9,11 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+/*
 .errors p{
   display: none;
 }
-/*
+
  * Global layout stuff
  */
 
@@ -110,11 +111,16 @@ main {
   display:flex;
   
 }
-
+#tweet-text{
+  width:100%;
+}
 .negativeChar {
   color: #BB3E49;
 }
-
+.new-tweet{
+  width:100%;
+  padding:20px;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

@@ -7,9 +7,10 @@ $(document).ready(function() {
     counter.text(charRemaining);
     if (charRemaining < 0) {
       counter.addClass("negativeChar");
+      //$("#ecessive-tweet").slideUp("fast");
     } else {
         counter.removeClass("negativeChar");
-        $(".errors p").slideUp("fast");
+        //$("#empty-tweet").slideUp("fast");
     }
   });
 });

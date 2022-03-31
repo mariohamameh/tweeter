@@ -56,10 +56,14 @@
               <output name="counter" class="counter" for="tweet-text">140</output>
             </div>
           </form>
-          <div class="errors">
-            <p id="empty-tweet">Cannot submit an empty tweet</p>
-            <p id="excessive-tweet">Exceeded permitted character count</p>
+          <div id="empty-tweet">
+            <p>Cannot submit an empty tweet</p>
           </div>
+          <div id="excessive-tweet">
+            <p>Exceeded permitted character count</p>
+          </div>
+           
+          
         </section>
         <section class="tweets-container"></section>
           <!-- this is where the rendered tweets should appear -->

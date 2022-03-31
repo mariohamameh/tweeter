@@ -34,10 +34,10 @@ const data = [
 
 const renderTweets = function(tweets) {
   // loops through tweets
-  $('.tweets-container').empty();
+  //$('.tweets-container').empty();
   
   for (let tweet of tweets) {
-    $('.tweets-container').append(createTweetElement(tweet));
+    $('.tweets-container').prepend(createTweetElement(tweet));
   }
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
@@ -47,16 +47,16 @@ const createTweetElement = function(tweet) {
   let $tweet = ` 
     <div class="tweet">
       <div class="tweet-header">
-        <span> <img class="avatar"  src=${tweet.user.avatars}>${tweet.user.name}</span>
+        <span> <img class="avatar"  src=${escape(tweet.user.avatars)}>${escape(tweet.user.name)}</span>
         <div class="tweet-username">   
-          <span class="tag">${tweet.user.handle}</span>
+          <span class="tag">${escape(tweet.user.handle)}</span>
         </div>  
       </div>
       <div class="tweet-content">
-        ${tweet.content.text}
+        ${escape(tweet.content.text)}
       </div>
       <footer class= "tweet-footer">
-        <span>${tweet.created_at}</span>
+        <span>${timeago.format(tweet.created_at)}</span>
         <div class="icons">
           <i class="fa-regular fa-flag"></i>
           <i class="fa-solid fa-heart"></i>
@@ -69,17 +69,44 @@ const createTweetElement = function(tweet) {
 }
 
 $(document).ready(()=>{
+  $('#empty-tweet').hide();
+  $('#excessive-tweet').hide();
+  loadTweets();
   $('#form').submit((e) => {
-    const form = $('#form')
     e.preventDefault();
-    console.log('THIS', form)
-    const inputData = form.serialize()
-    console.log('label',inputData)
+    $('#empty-tweet').hide();
+    $('#excessive-tweet').hide();
+    const form = $('#form');
+    const inputData = form.serialize();
+    console.log('label',inputData);
+    if (inputData.length === 5) {
+      $('#empty-tweet').slideDown();
+      return; 
+    }
+    if (inputData.length > 145){
+      $('#excessive-tweet').slideDown();
+      return; 
+    }
     $.ajax('/tweets', { method: "POST", data: inputData }).then(() => {
-      renderTweets(data)
+      $(".tweet-container").empty();
+      $("#tweet-text").val("");
+      loadTweets();
+
     })
     .catch(e => console.log(e))
   });
-  renderTweets(data);
 })
+
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+const loadTweets = function() {
+  $.ajax("/tweets", { method: 'GET' })
+   .then(function (thePosts) {
+     renderTweets(thePosts);
+   });
+};
 
