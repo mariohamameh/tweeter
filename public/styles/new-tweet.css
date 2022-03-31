@@ -1,0 +1,13 @@
+div {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Bungee', cursive;
+}
+div > button{
+    background-color: #4056A1;
+    color: #FFFFFF;
+}
+textarea{
+    display: flex;
+    flex-direction: column;
+}

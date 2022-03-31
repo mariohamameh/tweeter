@@ -9,7 +9,9 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
+.errors p{
+  display: none;
+}
 /*
  * Global layout stuff
  */
@@ -18,6 +20,99 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+main {
+  width: 90%;
+  display:flex;
+  align-items: center;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  width:90%;
+  background-color: #ffffff;
+  clear: both;
+  margin: 0 auto;
+  
+  padding: 2em;
+}
+.icons  i:hover {
+  color:rgb(223, 202, 17);
+}
+.tweet:hover {
+  opacity: 1;
+  text-shadow: 0.1px 0.1px #5f5c53;
+  box-shadow: 7px 7px #99a9e0;
+}
+
+
+.tweets-container {
+  width: 90%;
+  background-color: bisque;
+  
+}
+.tweet {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border:1px solid #545149;
+
+}
+.tweet-content {
+  width:100%;
+  padding:20px;
+  font-family: 'Source Sans Pro';
+  display: flex;
+  justify-content: flex-start;
+}
+.tweet-header {
+  width: 100%;
+  padding: 20px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.tweet-footer{
+  border-top: 2px solid #545149;
+  width:100%;
+  padding: 20px;
+  font-family: 'Source Sans Pro';
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+.icons {
+  display: flex;
+  justify-content: space-around;
+}
+.fa-flag {
+  color: black;
+}
+.fa-heart {
+  color: black;
+}
+.fa-retweet{
+  color:black;
+}
+.avatar {
+  width: 50px; 
+  height: 50px; 
+  object-fit: cover;
+}
+.tweet-username {
+  display:flex;
+  
+}
+
+.negativeChar {
+  color: #BB3E49;
 }
 
 /*
