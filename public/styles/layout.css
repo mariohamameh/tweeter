@@ -9,7 +9,19 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
+@media only screen and (max-width: 900px) {
+  /* Write Tablet only CSS here */
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  header{
+    width:100%;
+  }
+  .container {
+    width:100%;
+  }
+} 
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -26,14 +38,14 @@ body {
   display:flex;
   align-items: flex-end;
   flex-direction: column;
-  width:50%;
+  width:100%;
   background-color: #f4f1ec;
   clear: both;
   margin: 0px;
   padding: 2em;
 }
 .icons  i:hover {
-  color:rgb(223, 202, 17);
+  color:rgb(255, 230, 0);
 }
 .tweet:hover {
   opacity: 1;
