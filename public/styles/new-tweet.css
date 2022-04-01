@@ -10,4 +10,5 @@ div > button{
 textarea{
     display: flex;
     flex-direction: column;
+    font-family: "Source Sans Pro";
 }

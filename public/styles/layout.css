@@ -9,37 +9,27 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-/*
-.errors p{
-  display: none;
-}
-
- * Global layout stuff
- */
 
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
-
-}
-main {
-  width: 90%;
-  display:flex;
-  align-items: center;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-  margin: auto;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.container {
-  width:90%;
-  background-color: #ffffff;
-  clear: both;
-  margin: 0 auto;
   
+}
+.content{
+  display:flex;
+}
+.container {
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  display:flex;
+  align-items: flex-end;
+  flex-direction: column;
+  width:50%;
+  background-color: #f4f1ec;
+  clear: both;
+  margin: 0px;
   padding: 2em;
 }
 .icons  i:hover {
@@ -50,19 +40,15 @@ main {
   text-shadow: 0.1px 0.1px #5f5c53;
   box-shadow: 7px 7px #99a9e0;
 }
-
-
 .tweets-container {
-  width: 90%;
-  background-color: bisque;
-  
+  width: 100%;
+  background-color: #f4f1ec; 
 }
 .tweet {
   display: flex;
   align-items: center;
   flex-direction: column;
   border:1px solid #545149;
-
 }
 .tweet-content {
   width:100%;
@@ -76,8 +62,7 @@ main {
   padding: 20px;
   color: black;
   display: flex;
-  justify-content: space-between;
-  
+  justify-content: space-between;  
 }
 .tweet-footer{
   border-top: 2px solid #545149;
@@ -86,12 +71,7 @@ main {
   font-family: 'Source Sans Pro';
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  
-}
-.icons {
-  display: flex;
-  justify-content: space-around;
+  justify-content: space-between;  
 }
 .fa-flag {
   color: black;
@@ -107,10 +87,6 @@ main {
   height: 50px; 
   object-fit: cover;
 }
-.tweet-username {
-  display:flex;
-  
-}
 #tweet-text{
   width:100%;
 }
@@ -121,6 +97,3 @@ main {
   width:100%;
   padding:20px;
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
