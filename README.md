@@ -4,8 +4,6 @@ Tweeter is a simple, single-page Twitter clone.
 
 ![Screen Shot 2022-04-01 at 2 21 49 PM](https://user-images.githubusercontent.com/96452610/161320537-5b646c6d-e472-418a-9df0-6f2cc4e98e16.png)
 
-![Screen Shot 2022-04-01 at 2 12 38 PM](https://user-images.githubusercontent.com/96452610/161320159-580e1e08-e40a-46e6-a4d7-91fa9e502519.png)
-
 ![Screen Shot 2022-04-01 at 2 13 17 PM](https://user-images.githubusercontent.com/96452610/161320177-08289da2-979f-4f65-9851-227190b200bc.png)
 
 ![Screen Shot 2022-04-01 at 2 13 34 PM](https://user-images.githubusercontent.com/96452610/161320188-b5ed1359-a34e-4dd2-b952-b8b170727093.png)
